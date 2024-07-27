@@ -1,0 +1,356 @@
+
+https://www.simplilearn.com/tutorials/python-tutorial/python-pandas
+1. python Variables 
+
+In Python, a variable is a container that stores data. 
+It is a reserved memory location that has a name and can hold a value. 
+Variables are used to store and manipulate data throughout your program. 
+
+
+Variable names must start with a letter (a-z, A-Z) or an underscore (_).
+The remaining characters in the variable name can include letters, numbers, and underscores.
+
+but can't include specific charactor ( # , ?,@,&)
+Variable names are case-sensitive (e.g., myVar and myvar are different).
+
+Variables in Python can hold different types of data, 
+such as integers, floats, strings, lists, dictionaries, etc. 
+
+my_integer = 42
+my_float = 3.14
+my_string = "Hello, Python!"
+my_list = [1, 2, 3, 4]
+my_dict = {'key': 'value'}
+
+my_bool = True 
+my_set = {1,2}
+
+#Note List, tuple , set and dictionary different role in python ..
+
+You can change the value of a variable by assigning a new value to it.
+
+x, y, z = 1, 2, 3
+
+x= 6 ; y = 9
+
+Constants:
+While Python doesn't have true constants, it's a convention to use uppercase names for variables that should be treated as constants.
+
+PI = 3.14159
+
+Deleting Variables:
+You can delete a variable using the del statement.
+
+my_var = 10
+del my_var
+# Now, my_var is not defined
+
+
+.........................................................................
+Python Data types
+.........................................................................
+# Numeric types
+x = 5            # int
+y = 3.14         # float
+z = 2 + 3j       # complex
+
+# Sequence types
+text = "Hello, Python!"    # str
+my_list = [1, 2, 3]        # list
+my_tuple = (1, 2, 3)        # tuple
+
+# Set type
+my_set = {1, 2, 3}          # set
+
+# Mapping type
+my_dict = {'key': 'value'}  # dict
+
+# Boolean type
+is_true = True              # bool
+
+# None type
+empty_value = None          # None
+
+
+Python has several built-in data types, each of which can store different kinds of data. Here are the main data types in Python:
+
+Numeric Data Types
+
+int: Stores whole numbers (like 1, 100, or -5)
+float: Stores decimal numbers (like 3.14, 1.72, or -2.5)
+complex: Stores complex numbers (like 1+2j or 3j)
+Sequence Data Types
+
+list: An ordered collection of items (like [1, 2, 3, 4] or ["apple", "banana", "orange"])
+tuple: An ordered collection of items that cannot be changed (like (1, 2, 3, 4) or ("apple", "banana", "orange"))
+range: A sequence of numbers (like range(5) which generates 0, 1, 2, 3, 4)
+str: A sequence of characters (like "Hello, World!" or "This is a string.")
+
+Mapping Data Types
+
+dict: A collection of key-value pairs (like {"name": "Alice", "age": 30, "city": "New York"})
+Set Data Types
+
+set: An unordered collection of unique items (like {1, 2, 3, 4} or {"apple", "banana", "orange"})
+Binary Data Types
+
+bytes: A sequence of bytes (useful for storing raw binary data)
+bytearray: A mutable sequence of bytes (like bytearray(b"Hello, World!"))
+memoryview: Provides a memory view of an object (e.g., a bytearray)
+These data types provide a foundation for building more complex data structures and manipulating data in Python programs. Understanding the different data types and their properties is essential for effective Python programming.
+
+
+.......................................................................
+Python Operations 
+.......................................................................
+
+1. Arithmetic Operators:
++: Addition
+-: Subtraction
+*: Multiplication
+/: Division (returns a float)
+//: Floor Division (returns an integer)
+%: Modulus (returns the remainder)
+**: Exponentiation
+
+a = 5
+b = 2
+
+print(a + b)    # Output: 7
+print(a - b)    # Output: 3
+print(a * b)    # Output: 10
+print(a / b)    # Output: 2.5
+print(a // b)   # Output: 2
+print(a % b)    # Output: 1
+print(a ** b)   # Output: 25
+
+2. Comparison Operators:
+==: Equal to
+!=: Not equal to
+<: Less than
+>: Greater than
+<=: Less than or equal to
+>=: Greater than or equal to
+
+x = 5
+y = 10
+
+print(x == y)   # Output: False
+print(x != y)   # Output: True
+print(x < y)    # Output: True
+print(x > y)    # Output: False
+print(x <= y)   # Output: True
+print(x >= y)   # Output: False
+
+
+3. Logical Operators:
+and: Logical AND
+or: Logical OR
+not: Logical NOT
+
+
+p = True
+q = False
+
+print(p and q)  # Output: False
+print(p or q)   # Output: True
+print(not p)    # Output: False
+
+
+4. Assignment Operators:
+=: Assignment
++=: Addition assignment
+-=: Subtraction assignment
+*=: Multiplication assignment
+/=: Division assignment
+
+x = 5
+x += 3   # Equivalent to x = x + 3
+print(x)  # Output: 8
+
+
+5. Membership Operators:
+in: True if a value is found in the specified sequence
+not in: True if a value is not found in the specified sequence
+
+my_list = [1, 2, 3, 4]
+
+print(3 in my_list)      # Output: True
+print(5 not in my_list)  # Output: True
+
+
+6. Identity Operators:
+is: True if both variables are the same object
+is not: True if both variables are not the same object
+
+a = [1, 2, 3]
+b = [1, 2, 3]
+
+print(a is b)      # Output: False
+print(a is not b)  # Output: True
+
+
+
+.......................................................
+conditionals (`if`, `elif`, `else`).
+
+if(x > y ){
+    
+}
+.......................................................
+The if statement is the most basic conditional statement in Python. It allows you to execute a block of code if a certain condition is true. Here's the syntax:
+
+if ():
+pass 
+
+
+number = 10
+
+if number % 2 == 0:
+    print("The number is even")
+else:
+    print("The number is odd")
+
+
+if condition1:
+    code block 1
+elif condition2:
+    code block 2
+elif condition3:
+    code block 3
+else:
+    code block (optional)
+
+
+grade = 85
+
+if grade >= 90:
+    print("Excellent")
+elif grade >= 80:
+    print("Good")
+elif grade >= 70:
+    print("Average")
+else:
+    print("Fail")
+
+
+x = 10
+if x > 15:
+    print("x is greater than 15")
+elif x > 5:
+    print("x is greater than 5 but not greater than 15")
+else:
+    print("x is 5 or less")
+
+
+x = 3
+if x > 5:
+    print("x is greater than 5")
+else:
+    print("x is 5 or less")
+
+
+x = 10
+if x > 5:
+    print("x is greater than 5")
+    if x > 15:
+        print("x is also greater than 15")
+    else:
+        print("x is not greater than 15")
+else:
+    print("x is 5 or less")
+
+
+Ternary Conditional Expression:  
+x = 10
+message = "x is greater than 5" if x > 5 else "x is 5 or less"
+print(message)
+
+
+.......................................................
+Python Loops 
+.......................................................
+
+loops are used to repeatedly execute a block of code until a certain condition is met. 
+There are two main types of loops: for loops and while loops.
+
+
+The for loop in Python is used to iterate over a sequence (such as a list, tuple, string, or range) or other iterable objects.
+
+For Loop:
+The syntax of a for loop is as follows:
+for variable in iterable:
+//code to be executed
+iterables can be any type of data structure like list, tuple, string etc.
+Example:
+# iterate over a list
+fruits = ['apple', 'banana', 'cherry']
+for fruit in fruits:
+print("I like", fruit)
+
+
+# Iterate over a range
+for i in range(5):  # Range from 0 to 4
+    print(i)
+
+
+for x in range(10):
+  if x == 5:
+    break
+  print(x)
+
+fruits = ["apple", "banana", "cherry"]
+for fruit in fruits:
+    if fruit == "banana":
+        break
+    print(fruit)
+
+for x in range(10):
+  if x % 2 != 0:
+    continue
+  print(x)
+
+
+fruits = ["apple", "banana", "cherry"]
+for fruit in fruits:
+    if fruit == "banana":
+        continue
+    print(fruit)
+
+
+for i in range(5):
+  print(i)
+else:
+  print("Loop completed")
+
+fruits = ["apple", "banana", "cherry"]
+for fruit in fruits:
+    print(fruit)
+else:
+    print("Loop is finished.")
+
+'while' Loop:
+
+The while loop in Python is used to repeatedly execute a block of code as long as a specified condition is true.
+
+count = 0
+while count < 5:
+  print(count)
+  count += 1
+
+
+i = 1
+while i < 11:
+    print(i)
+    i += 1
+
+
+i = 1
+while i <= 5:
+    print(i)
+    i += 1
+else:
+    print("Loop is finished.")
+
+
+

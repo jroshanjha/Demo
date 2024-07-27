@@ -1,0 +1,89 @@
+DDL(Data definition language)
+
+Create, alter,truncate , drop, add, remane, remove
+
+MySQL ----
+
+create database if not exists my_sql_course;
+
+-- drop database if exists my_sql_course;
+
+use my_sql_course;
+
+-- create table if not exists my_course(
+-- id int(110) ,
+-- course_name varchar(30),
+-- fees varchar(20) ,
+-- c_code varchar(10)
+-- );
+
+create table if not exists students(
+id int primary key  auto_increment,
+s_name varchar(30) unique not null,
+age  varchar(3) check(age>18),
+email varchar(20) unique not null ,
+phone varchar(10) default '9205734294' ,
+address text CHECK (address IN ('noida', 'delhi', 'Punjab'))
+);
+
+select * from students;id
+-- show tables;
+
+-- describe table my_course;
+
+-- INSERT INTO students(id,s_name,email,phone,address)
+-- values(12,'techitsolution','tech@gmail.com','9205734294','noida sector - 51'),
+-- (13,'akash','akash@123','123456780','delhi'),
+-- (14,'hema','hema@123','0987654321','Noida'),
+-- (15,'gayathri','ga@gmail.com','123456','Delhi')
+
+-- describe table students
+
+select * from students;
+
+-- alter table students add column degree varchar(30);
+
+-- alter table students rename column degees to degrees;
+
+-- alter table students drop column degrees;
+
+-- alter table students add dob date ;
+
+-- alter table students alter column dob datetime;
+
+-- truncate table students;
+
+-- drop table if exists students;
+
+
+SQl ----
+
+
+
+
+--create database my_sql_course;
+
+
+use my_sql_course;
+
+create table my_course(
+id int,
+course_name varchar(30),
+fees varchar(20) ,
+c_code varchar(10)
+);
+
+alter table my_course add dob date ;
+
+select * from my_course;
+
+alter table my_course alter column dob DateTime;
+
+CREATE TABLE students (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    s_name VARCHAR(30) NOT NULL,
+    age INT CHECK (age > 18),
+    email VARCHAR(20) NOT NULL,
+    phone VARCHAR(10) DEFAULT '9205734294',
+    address TEXT CHECK (address IN ('noida', 'delhi', 'Punjab'))
+);
